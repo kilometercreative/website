@@ -1,0 +1,398 @@
+
+$dark: #363636
+$light: #F8F8F8
+$grey: #F4F4F4
+$accent: #587D8B
+$accent-alt: #D9E4E8
+$accent-hover: #496975
+
+body, div, h1, h2, h3, h4, h5, p, a
+  margin: 0
+  padding: 0
+
+body
+  background-color: $light
+
+h1
+  font-weight: 700
+  font-size: 36px
+  color: $dark
+
+h2
+  font-weight: 400
+  font-size: 24px
+  color: $dark
+
+h3
+  font-weight: 400
+  font-size: 20px
+  line-height: 35px
+  color: $dark
+
+h4
+  font-weight: 400
+  font-size: 18px
+  color: $accent-alt
+
+h5
+  font-weight: 400
+  font-size: 14px
+  color: $dark
+  text-transform: uppercase
+
+a
+  font-weight: 700
+  font-size: 14px
+  text-transform: uppercase
+  cursor: pointer
+  color: $accent
+  text-decoration: none
+  transition: color 200ms
+
+a:hover
+  color: $accent-hover
+
+p
+  font-weight: 300
+  font-size: 18px
+  color: $dark
+  line-height: 34px
+
+
+Button
+  padding: 20px 40px
+  border: none
+  border-radius: 100px
+  background-color: $accent
+  color: white
+  font-weight: 700
+  font-size: 14px
+  text-transform: uppercase
+  transition: padding 200ms
+  cursor: pointer
+
+Button:hover
+  padding: 20px 50px
+
+.page-container
+  width: 980px
+  display: flex
+  flex-direction: column
+  align-content: center
+  margin: auto
+  font-family: "Nunito Sans", sans-serif
+
+.web-header
+  margin-top: 30px
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+
+  .web-logo
+    height: 24px
+    width: 41px
+    object-fit: contain
+
+  .header-right
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+    height: 100%
+
+    .header-link
+      color: $dark
+      margin-left: 60px
+      transition: color 200ms
+
+    .header-link:hover
+      color: $accent
+
+
+.main
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+
+  .pane
+    min-height: 80vh
+    display: flex
+    flex-direction: column
+
+  .cover
+    align-items: center
+    justify-content: center
+    text-align: center
+    margin-bottom: 200px
+
+    h1
+      margin-bottom: 15px
+
+    h3
+      margin-bottom: 25px
+
+    a
+      margin-bottom: 30px
+
+  ._landing
+    max-width: 400px
+
+  ._work
+    max-width: 500px
+    min-height: 60vh
+    margin-bottom: 50px
+
+  ._cta
+    max-width: 650px
+
+  ._tools
+    align-content: flex-start
+    align-items: flex-start
+    text-align: left
+    width: auto
+    flex: 1
+
+  ._contact
+    max-width: 500px
+    min-height: 75vh
+    margin-bottom: 100px
+
+  ._about
+    max-width: 880px
+
+  ._full_case
+    margin-bottom: 100px
+
+.cases
+  width: 100%
+
+  .floating-link
+    position: absolute
+    transform: translateX(-100px)
+
+  .case-introduction
+    margin-bottom: 50px
+
+  .case-container
+    width: 100%
+
+    .web-case, .mobile-case
+      min-width: 100%
+      display: flex
+      flex-direction: column
+      margin-bottom: 200px
+
+      .web-case-cover-img
+        width: 100%
+        height: 400px
+        background-color: $grey
+        object-fit: contain
+        margin-bottom: 40px
+
+      .case-preview
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-start
+
+        .text
+          flex: 2
+          margin-right: 60px
+
+          h2, h3
+            margin-bottom: 20px
+
+          h4
+            margin-bottom: 17px
+
+          .links
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+
+            a
+              margin-right: 40px
+              margin-bottom: 40px
+
+        img
+          //width 40%
+          width: 400px
+          height: 400px
+          object-fit: contain
+          background-color: $grey
+
+    .mobile-case
+      .case-preview
+        align-items: center
+
+        img
+          //width: 40%
+          width: 400px
+          height: 711px
+          object-fit: contain
+          background-color: $grey
+
+    .default-case-preview
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin-bottom: 80px
+
+      .image-link
+        display: flex
+        margin-bottom: 30px
+
+      .default-case-preview-image
+        width: 400px
+        height: 400px
+        background-color: $grey
+        object-fit: contain
+
+      h2
+        margin-bottom: 10px
+
+      h4
+        margin-bottom: 15px
+
+  .previews-container
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+
+.full-case-container
+  opacity: 0
+  transition: opacity 500ms 500ms
+
+  h2
+    margin-bottom: 20px
+
+  .full-case
+    display: flex
+    flex-direction: column
+
+    .title-container
+      margin-top: 100px
+      margin-bottom: 30px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-end
+
+      .title-left
+        display: flex
+        flex-direction: row
+        align-items: center
+
+        .full-case-icon
+          height: 100px
+          width: 100px
+          background-color: $grey
+          object-fit: contain
+          margin-right: 30px
+
+        .title-left-text
+          display: flex
+          flex-direction: column
+
+
+    .full-case-cover-image
+      height: 400px
+      width: 100%
+      background-color: $grey
+      object-fit: contain
+
+    .purpose
+      margin-top: 100px
+
+    .palette
+      margin-top: 100px
+
+      .colors-container
+        display: flex
+        flex-direction: row
+
+        .color-wrapper
+          margin-right: 15px
+
+          .color
+            height: 75px
+            width: 75px
+            background-color: $grey
+            margin-bottom: 15px
+
+          h5
+            text-align: center
+
+    .full-case-mobile-image-container
+      margin-top: 100px
+      margin-bottom: 50px
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+
+      .full-case-mobile-image
+        width: 400px
+        height: 711px
+        object-fit: contain
+        background-color: $grey
+
+      p
+        margin-left: 50px
+        flex: 2
+
+    .full-case-web-image-container
+      margin-top: 100px
+      margin-bottom: 50px
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+
+      .full-case-web-image
+        width: 100%
+        height: 400px
+        object-fit: contain
+        background-color: $grey
+
+      p
+        margin-top: 50px
+        flex: 2
+        width: 400px
+        text-align: center
+
+.footer
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+  text-align: center
+
+  h4
+    font-size: 14px
+    color: $accent
+    font-weight: 400
+    margin-bottom: 40px
+
+  .footer-img
+    position: absolute
+    height: auto
+    width: 100vw
+    transform: translateX(calc(-(100vw - 980px) / 2))
+
+
+
+
+
+
+
+
+
+
+
+
+

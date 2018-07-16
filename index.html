@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kilometer Creative</title>
+    <link rel="stylesheet" href="parallax.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload="layoutIndexTest();">
+
+<div class="mobile-header">
+
+</div>
+
+<div class="parallax" id="parallax-container" onscroll="parallaxOnScroll()">
+    <div class="parallax-group">
+        <div class="page-px-layer page-container">
+
+            <div class="web-header">
+                <a href="index.html"><img src="./img/Logo.svg" alt="" class="web-logo"/></a>
+                <div class="header-right">
+                    <a href="work.html" class="link header-link">Work</a>
+                    <a href="about.html" class="link header-link">About</a>
+                    <a href="contact.html" class="link header-link">Contact</a>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="pane cover _landing">
+                    <h1>Design with purpose.</h1>
+                    <h3>Kilometer Creative is an interface design and full stack development firm based in Seattle.</h3>
+                    <a href="contact.html"><Button>Contact Us</Button></a>
+                </div>
+                <div class="pane cases">
+                    <!--<div class="floating-link">-->
+                        <!--<h2>Recent Work</h2>-->
+                        <!--<a>See all work</a>-->
+                    <!--</div>-->
+                    <div class="case-introduction">
+                        <h1>Recent Work</h1>
+                        <a href="work.html">See all</a>
+                    </div>
+                    <div class="case-container" id="case-container">
+                        <!--This is where content is dynamically loaded-->
+                    </div>
+                </div>
+                <div class="pane cover _cta">
+                    <h1>How we can help you.</h1>
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis imperdiet semper sem, vitae tempus odio feugiat non. Curabitur tincidunt varius risus, quis congue velit elementum ut. Duis nulla odio, euismod finibus.</h3>
+                    <a href="about.html">Learn more about kilometer creative</a>
+                    <a href="contact.html"><Button>Contact Us</Button></a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <h4>Copyright 2018 Kilometer Creative LLC</h4>
+                <img src="./img/base.svg" alt="" class="footer-img"/>
+            </div>
+
+        </div>
+        <div class="px-layer px-1 on-load">
+            <img src="./img/px_1.svg" alt="" id="px-1">
+        </div>
+        <div class="px-layer px-2 on-load">
+            <img src="./img/px_2.svg" alt="" id="px-2">
+        </div>
+        <div class="px-layer px-3 on-load">
+            <img src="./img/px_3.svg" alt="" id="px-3">
+        </div>
+        <div class="px-layer px-4 on-load">
+            <img src="./img/px_4.svg" alt="" id="px-4">
+        </div>
+    </div>
+</div>
+
+<script src="tempData.js"></script>
+<script src="parallax.js"></script>
+<script src="templating.js"></script>
+
+</body>
+</html>
