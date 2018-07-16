@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload="layoutProjectPageTest()">
+
+<div class="mobile-header">
+
+</div>
+
+<div class="page-container">
+
+    <div class="web-header">
+        <a href="index.html"><img src="./img/Logo.svg" alt="" class="web-logo"/></a>
+        <div class="header-right">
+            <a href="work.html" class="link header-link">Work</a>
+            <a href="about.html" class="link header-link">About</a>
+            <a href="contact.html" class="link header-link">Contact</a>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="pane _full_case">
+            <div class="full-case-container" id="full-case-container">
+                <div id="full-case" class="full-case">
+                    <div class="title-container">
+                        <div class="title-left">
+                            <!--Get ID and populate values via js-->
+                            <img src='#' alt='' class="full-case-icon" id="icon"/>
+                            <div class="title-left-text">
+                                <h1 id="title"></h1>
+                                <h4 id="tech"></h4>
+                            </div>
+                        </div>
+                        <a id="external-link"></a>
+                    </div>
+                    <img id="cover-image" src='' alt='' class="full-case-cover-image"/>
+                    <div class="purpose">
+                        <h2>Purpose</h2>
+                        <p id="purpose-text"></p>
+                    </div>
+
+                    <div class="palette">
+                        <h2>Palette</h2>
+                        <div id="palette-container" class="colors-container">
+                        </div>
+                    </div>
+
+                    <!--Images + captions are loaded here-->
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <h4>Copyright 2018 Kilometer Creative LLC</h4>
+        <!--<img src="./img/base.svg" alt="" class="footer-img"/>-->
+    </div>
+
+</div>
+
+<script src="tempData.js"></script>
+<script src="templating.js"></script>
+
+</body>
+</html>

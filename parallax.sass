@@ -1,0 +1,57 @@
+
+.on-load
+  animation-duration: 500ms
+  animation-delay: 1000ms
+  animation-name: fade-in
+  animation-timing-function: ease-in
+  animation-fill-mode: forwards
+  opacity: 0.0
+
+.on-load::before
+  opacity: 0.0
+
+.on-load::after
+  opacity: 1.0
+
+@keyframes fade-in
+  0%
+    opacity: 0.0
+  100%
+    opacity: 1.0
+
+
+.parallax
+  perspective: 300px
+  height: 100vh
+  overflow-x: hidden
+  overflow-y: auto
+
+.parallax-group
+  transform-style: preserve-3d
+  position: relative
+  height: 100vh
+
+.px-layer
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+//calculate scale by 1 + translateZ / perspective
+
+.px-1
+  transform: translateZ(-100px) scale(1.33) translateY(87vh)
+  z-index: -1
+
+.px-2
+  transform: translateZ(-250px) scale(1.83) translateY(77vh)
+  z-index: -2
+
+.px-3
+  transform: translateZ(-400px) scale(2.33) translateY(72vh)
+  z-index: -3
+
+.px-4
+  transform: translateZ(-500px) scale(2.67) translateY(55vh)
+  z-index: -4

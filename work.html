@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kilometer Creative</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload="layoutWorkPreviewTest();">
+
+<div class="mobile-header">
+
+</div>
+
+<div class="page-container">
+
+    <div class="web-header">
+        <a href="index.html"><img src="./img/Logo.svg" alt="" class="web-logo"/></a>
+        <div class="header-right">
+            <a class="link header-link">Work</a>
+            <a href="about.html" class="link header-link">About</a>
+            <a href="contact.html" class="link header-link">Contact</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="pane cover _work">
+            <h1>Develop for anything.</h1>
+            <h3>At Kilometer Creative we do full stack development for iOS, Android, web, and IOT. See our work below.</h3>
+            <a onClick="scrollToElement('tools');">What languages do we use?</a>
+        </div>
+        <div class="pane cases">
+            <div class="case-container previews-container" id="case-container">
+                <!--This is where content is dynamically loaded-->
+            </div>
+        </div>
+        <div id="tools" class="pane cover _tools">
+            <h1>Our Tools</h1>
+            <h3>To develop for a variety of platforms we work with several languages and technologies. For web we implement in React.js or vanilla HTML5, CSS3, JS. On mobile apps we develop cross-platform in react-native or in Swift for iOS. We work primarily with Spritekit in Swift for mobile games, but are also experienced with Unity for cross-platform games such as Tileform. All of our backend work is done in AWS.</h3>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h4>Copyright 2018 Kilometer Creative LLC</h4>
+        <!--<img src="./img/base.svg" alt="" class="footer-img"/>-->
+    </div>
+
+</div>
+
+<script src="tempData.js"></script>
+<script src="templating.js"></script>
+<script src="scrollTo.js"></script>
+
+</body>
+</html>
