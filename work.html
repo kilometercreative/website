@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body onload="layoutWorkPreviewTest();">
+<body onload="parseOnLoad(layoutWorkPreviewTest.bind(this));">
 
 <div class="mobile-header">
 
@@ -47,10 +47,7 @@
     </div>
 
 </div>
-
-<script src="data.json"></script>
 <script src="templating.js"></script>
 <script src="scrollTo.js"></script>
-
 </body>
 </html>
