@@ -1,11 +1,19 @@
 
+data = {
+    cases: []
+};
 
-function parseOnLoad() {
-    //empty for now because data is just a js object
-
-    //When the data has been received, set the content to animate in:
+function parseOnLoad(then) {
+    let req = new XMLHttpRequest();
+    req.onreadystatechange = () => {
+        if (req.readyState === 4) {
+            data = JSON.parse(req.responseText);
+            then();
+        }
+    };
+    req.open("GET", "data.json");
+    req.send();
 }
-
 
 // **********
 // Temporary test functions to lay stuff out on page load
@@ -40,7 +48,6 @@ function layoutProjectPageTest() {
 // *********
 
 function layoutWebTile(parent, data) {
-
     parent.innerHTML +=
         "<div class='web-case'>" +
             "<img src='' alt='' class='web-case-cover-img'/>" +
@@ -60,7 +67,6 @@ function layoutWebTile(parent, data) {
 }
 
 function layoutAppTile(parent, data) {
-
     parent.innerHTML +=
         "<div class='mobile-case'>" +
             "<div class='case-preview'>" +
@@ -79,7 +85,6 @@ function layoutAppTile(parent, data) {
 }
 
 function layoutWorkPreviewTile(parent, index, data) {
-
     let linkText = data.platform === "Mobile" ? "Download App" : "Visit Site";
     let projectLink = 'project.html#' + index;
     let imageSource = "./img/" + data.previewImage;
@@ -94,7 +99,6 @@ function layoutWorkPreviewTile(parent, index, data) {
 }
 
 function layoutProjectPage(index, data) {
-
     // TODO - This opacity fade needs to be called once data is received, is funky rn
     document.getElementById('full-case-container').style.opacity = "1";
 
@@ -129,9 +133,7 @@ function layoutProjectPage(index, data) {
 }
 
 function layoutProjectImageTile(obj) {
-
     //This is stupid and needs to be fixed
-
     let path = "./productImg/" + obj.source;
     imgClass = "";
     containerClass = "";

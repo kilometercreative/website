@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-all=$(ls)
+files=$(ls)
 while IFS='' read -r line || [[ -n "$line" ]]; do
-    all=$(echo "$all" | grep -v -e "^"$(echo "$line" | sed -e "s/*/\\\(.*\\\)/g")"$")
+    files=$(echo "$files" | grep -v -e "^"$(echo "$line" | sed -e "s/*/\\\(.*\\\)/g")"$")
 done < .s3ignore
 
-CMDS=()
+includes=()
 while read -r i; do
-    CMDS+=("--include=$i")
-done <<< "$all"
+    includes+=("--include=$i")
+done <<< "$files"
 
-echo "${CMDS[@]}" | xargs aws s3 sync . s3://kilometercreative.com/v2 --exclude "*" --profile km
+echo "${includes[@]}" | xargs aws s3 sync . s3://kilometercreative.com/v2 --exclude "*" --profile "${profile-default}"

@@ -8,12 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body onload="layoutIndexTest();">
-
+<body onload="parseOnLoad(layoutIndexTest.bind(this));">
 <div class="mobile-header">
 
 </div>
-
 <div class="parallax" id="parallax-container" onscroll="parallaxOnScroll()">
     <div class="parallax-group">
         <div class="page-px-layer page-container">
@@ -74,10 +72,7 @@
         </div>
     </div>
 </div>
-
-<script src="tempData.js"></script>
 <script src="parallax.js"></script>
 <script src="templating.js"></script>
-
 </body>
 </html>
