@@ -7,14 +7,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body onload="layoutProjectPageTest()">
-
+<body onload="parseOnLoad(layoutProjectPageTest.bind(this))">
 <div class="mobile-header">
 
 </div>
-
 <div class="page-container">
-
     <div class="web-header">
         <a href="index.html"><img src="./img/Logo.svg" alt="" class="web-logo"/></a>
         <div class="header-right">
@@ -23,9 +20,7 @@
             <a href="contact.html" class="link header-link">Contact</a>
         </div>
     </div>
-
     <div class="main">
-
         <div class="pane _full_case">
             <div class="full-case-container" id="full-case-container">
                 <div id="full-case" class="full-case">
@@ -66,9 +61,6 @@
     </div>
 
 </div>
-
-<script src="tempData.js"></script>
 <script src="templating.js"></script>
-
 </body>
 </html>
