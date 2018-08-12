@@ -54,7 +54,7 @@ function layoutWebTile(parent, data) {
                         "<a>View case study</a>" +
                     "</div>" +
                 "</div>" +
-                "<img src='' alt=''/>" +
+                "<img src='' alt='' class='web-case-alt-img'/>" +
             "</div>" +
        "</div>";
 }
@@ -73,7 +73,7 @@ function layoutAppTile(parent, data) {
                         "<a>View case study</a>" +
                     "</div>" +
                 "</div>" +
-                "<img src='' alt=''/>" +
+                "<img src='' alt='' class='mobile-case-cover-img'/>" +
             "</div>" +
         "</div>";
 }

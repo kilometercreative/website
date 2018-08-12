@@ -96,6 +96,69 @@ Button:hover {
     .web-header .header-right .header-link:hover {
       color: #587D8B; }
 
+.mobile-header {
+  position: absolute;
+  background-color: #F8F8F8;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Nunito Sans", sans-serif; }
+  .mobile-header .top {
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 2px #F4F4F4;
+    transition: height 200ms; }
+    .mobile-header .top .mobile-logo {
+      height: 25px;
+      margin-top: 3px;
+      margin-left: 15px; }
+    .mobile-header .top .accordion-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 18px;
+      width: 30px;
+      margin-right: 15px;
+      transition: height 200ms; }
+      .mobile-header .top .accordion-button .accordion-component {
+        width: 20px;
+        height: 2.5px;
+        background-color: #363636; }
+    .mobile-header .top .accordion-button:hover {
+      cursor: pointer; }
+    .mobile-header .top .accordion-button-expanded {
+      height: 30px; }
+  .mobile-header .top-expanded {
+    height: 90px;
+    border-bottom: none; }
+  .mobile-header .mobile-nav-container {
+    width: 100vw;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+    overflow: hidden;
+    transition: height 500ms, opacity 400ms;
+    opacity: 0; }
+    .mobile-header .mobile-nav-container .mobile-header-link {
+      margin-top: 20px;
+      margin-left: 15px;
+      color: #363636;
+      font-size: 18px;
+      font-weight: 300; }
+  .mobile-header .mobile-nav-container-expanded {
+    height: calc(100vh - 90px);
+    opacity: 1; }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -311,6 +374,117 @@ Button:hover {
     position: absolute;
     height: auto;
     width: 100vw;
-    transform: translateX(calc(-(100vw - 980px) / 2)); }
+    transform: translateX(calc(-(100vw - 980px) / 2));
+    z-index: -1; }
+
+@media (max-width: 1080px) {
+  .page-container {
+    width: 100vw;
+    align-items: center; }
+
+  .web-header {
+    width: 90vw; }
+
+  .main {
+    width: 90vw; }
+    .main ._landing {
+      width: 80vw;
+      margin-bottom: 0; }
+    .main ._cta {
+      width: 80vw;
+      margin-bottom: 40px; }
+    .main ._work {
+      width: 80vw;
+      margin-bottom: 40px; }
+    .main .cases .case-container .default-case-preview {
+      width: 90vw;
+      align-items: center; }
+
+  .footer .footer-img {
+    width: 150vw; } }
+@media (max-width: 768px) {
+  .main ._about, .main ._about_story {
+    margin-top: 80px;
+    margin-bottom: 0;
+    align-items: flex-start;
+    text-align: left;
+    min-height: 0; }
+  .main .case-container .web-case {
+    margin-bottom: 60px; }
+    .main .case-container .web-case .case-preview .web-case-alt-img {
+      display: none; }
+    .main .case-container .web-case .case-preview .text {
+      margin-right: 0; }
+  .main .case-container .mobile-case {
+    margin-bottom: 60px; }
+    .main .case-container .mobile-case .case-preview {
+      flex-direction: column-reverse; }
+      .main .case-container .mobile-case .case-preview .text {
+        margin-right: 0; }
+      .main .case-container .mobile-case .case-preview .mobile-case-cover-img {
+        width: 90vw;
+        height: calc(100vh - 70px);
+        margin-bottom: 30px; }
+  .main ._full_case .full-case-container {
+    width: 90vw; }
+    .main ._full_case .full-case-container .full-case .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
+      .main ._full_case .full-case-container .full-case .title-container .title-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px; }
+        .main ._full_case .full-case-container .full-case .title-container .title-left .title-left-text {
+          margin-top: 20px; }
+      .main ._full_case .full-case-container .full-case .title-container a {
+        font-size: 14px;
+        font-weight: 400; } }
+@media (max-width: 480px) {
+  h1 {
+    font-size: 26px; }
+
+  h3 {
+    font-size: 18px; }
+
+  button {
+    font-size: 12px;
+    padding: 15px 25px; }
+
+  button:hover {
+    padding: 15px 35px; }
+
+  .web-header {
+    display: none; }
+
+  .mobile-header {
+    display: flex; }
+
+  .main {
+    width: 90vw; }
+    .main ._landing {
+      width: 90vw;
+      min-height: 50vh;
+      margin-top: 80px;
+      margin-bottom: 0;
+      align-items: flex-start; }
+      .main ._landing h3 {
+        text-align: left; }
+    .main .case-introduction {
+      display: flex;
+      align-items: baseline;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 15px; }
+    .main .case-container .default-case-preview .default-case-preview-image {
+      width: 90vw;
+      height: 90vw; }
+    .main ._cta {
+      width: 90vw;
+      margin-bottom: 40px; }
+
+  .footer .footer-img {
+    width: 200vw; } }
 
 /*# sourceMappingURL=style.css.map */
