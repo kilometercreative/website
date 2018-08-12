@@ -459,7 +459,8 @@ Button:hover {
     display: none; }
 
   .mobile-header {
-    display: flex; }
+    display: flex;
+    position: fixed; }
 
   .main {
     width: 90vw; }
