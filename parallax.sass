@@ -33,6 +33,7 @@
 
 .px-layer
   position: absolute
+  transition: opacity 300ms
   top: 0
   right: 0
   bottom: 0
@@ -55,3 +56,29 @@
 .px-4
   transform: translateZ(-500px) scale(2.67) translateY(55vh)
   z-index: -4
+
+
+@media (max-width: 1080px)
+
+  .px-4, .px-3, .px-2, .px-1
+    display: block
+    text-align: right
+    width: 100vw
+
+
+    #px-4, #px-3, #px-2, #px-1
+      width: 200vw
+      transform: translateX(-100vw) translateY(100px)
+
+@media (max-width: 480px)
+  .px-3, .px-2, .px-1
+    display: none
+
+  .px-4
+    #px-4
+      width: 300vw
+      transform: translateX(-130vw) translateY(-70px)
+
+
+
+
