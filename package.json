@@ -1,0 +1,37 @@
+{
+  "name": "km-website",
+  "version": "1.0.0",
+  "description": "Kilometer Creative's new and improved website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": ".deploy/upload.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kilometercreative/website.git"
+  },
+  "author": "Kilometer Creative",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kilometercreative/website/issues"
+  },
+  "homepage": "https://github.com/kilometercreative/website#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-minify-mangle-names": "^0.4.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "html-minifier": "^3.5.19"
+  },
+  "babel": {
+    "presets": [
+      [
+        "minify",
+        {
+          "mangle": true
+        }
+      ]
+    ]
+  }
+}

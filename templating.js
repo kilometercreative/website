@@ -12,6 +12,7 @@ function parseOnLoad(then) {
         }
     };
     req.open("GET", "data.json");
+    req.setRequestHeader('Cache-Control', 'no-cache'); // for development
     req.send();
 }
 
