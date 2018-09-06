@@ -55,16 +55,25 @@
       "secondaryImage": "secondary.png",
       "images": [
         {
-          "source": "first.png", "caption": "first image"},
+          "source": "first.png"},
         {
-          "source": "second.png", "caption": "second image"},
+          "source": "second.png"},
         {
-          "source": "third.png", "caption": "third image"},
+          "source": "third.png"},
         {
-          "source": "fourth.png", "caption": "fourth image"}
+          "source": "fourth.png"}
       ],
       "introduction": "This is a filler introduction and holy moly does it really just get your britches full of stitches. You should check out this rad case study that just absolutely takes the cake.",
-      "body": "Now that you've clicked on this case study you can see how it is just full of wonder, every single person who has ever lived has unanimously agreed that this product is the single greatest thing to exist. Now that might sound a tad vain, but it is absolutely correct.",
+      "body": [
+        {
+          "title": "Purpose",
+          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+        },
+        {
+          "title": "Lessons Learned",
+          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+        }
+      ],
       "link": "https://www.pluspackage.io"
     },
     {
@@ -83,43 +92,71 @@
       "logo": "",
       "images": [
         {
-          "source": "first.png", "caption": "first image"},
+          "source": "first.png"},
         {
-          "source": "second.png", "caption": "second image"},
+          "source": "second.png"},
         {
-          "source": "third.png", "caption": "third image"},
+          "source": "third.png"},
         {
-          "source": "fourth.png", "caption": "fourth image"}
+          "source": "fourth.png"}
       ],
       "introduction": "This is a filler introduction and holy moly does it really just get your britches full of stitches. You should check out this rad case study that just absolutely takes the cake.",
-      "body": "Now that you've clicked on this case study you can see how it is just full of wonder, every single person who has ever lived has unanimously agreed that this product is the single greatest thing to exist. Now that might sound a tad vain, but it is absolutely correct.",
+      "body": [
+        {
+          "title": "Purpose",
+          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+        },
+        {
+          "title": "Lessons Learned",
+          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+        }
+      ],
       "link": "https://www.pluspackage.io"
     },
     {
       "title": "Polarity - the game",
       "platform": "Mobile",
       "tech": "/mobile/iOS/swift/spritekit",
-      "date": "Winter 2018",
+      "date": "Summer 2017",
       "colors": [
-        "#AA4444",
-        "#AA9944",
-        "#AAAA99"
+        "#231F20",
+        "#202859",
+        "#EC2024",
+        "#3BB44A",
+        "#AA529E",
+        "#29A9E1",
+        "#FDCE13"
       ],
       "icon": "polarity_icon.png",
-      "primaryImage": "primary.png",
-      "secondaryImage": "secondary.png",
-      "images": [
+      "coverImage": "polarity_cover.png",
+      "primaryImage": "polarity_cover.png",
+      "secondaryImage": "polarity_preview.png",
+      "previewImage": "polarity_preview.png",
+      "productImages": [
         {
-          "source": "first.png", "caption": "first image"},
+          "source": "polarity_1.png", "type": "mobile"},
         {
-          "source": "second.png", "caption": "second image"},
+          "source": "polarity_2.png", "type": "mobile"},
         {
-          "source": "third.png", "caption": "third image"},
+          "source": "polarity_3.png", "type": "mobile"},
         {
-          "source": "fourth.png", "caption": "fourth image"}
+          "source": "polarity_4.png", "type": "mobile"},
+        {
+          "source": "polarity_5.png", "type": "square"},
+        {
+          "source": "polarity_6.png", "type": "square"}
       ],
       "introduction": "This is a filler introduction and holy moly does it really just get your britches full of stitches. You should check out this rad case study that just absolutely takes the cake.",
-      "body": "Now that you've clicked on this case study you can see how it is just full of wonder, every single person who has ever lived has unanimously agreed that this product is the single greatest thing to exist. Now that might sound a tad vain, but it is absolutely correct.",
+      "body": [
+        {
+          "title": "Purpose",
+          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+        },
+        {
+          "title": "Lessons Learned",
+          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+        }
+      ],
       "link": "https://www.pluspackage.io"
     }
   ]

@@ -344,7 +344,9 @@ Button:hover {
       height: 711px;
       object-fit: contain;
       background-color: white;
-      margin-top: 50px; }
+      margin-top: 50px;
+      border: solid #F4F4F4 2px;
+      border-radius: 10px; }
     .full-case-container .project-image-container .full-case-square-image {
       width: 400px;
       height: 400px;
