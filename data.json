@@ -27,8 +27,17 @@
         {
           "source": "plus_package_sticker.png", "type": "square"}
       ],
-      "introduction": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly.",
-      "body": "Now that you've clicked on this case study you can see how it is just full of wonder, every single person who has ever lived has unanimously agreed that this product is the single greatest thing to exist. Now that might sound a tad vain, but it is absolutely correct.",
+      "introduction": "Plus Package sells individual snacks and drinks at bulk prices to college students, to help keep food prices down.",
+      "body": [
+        {
+          "title": "Purpose",
+          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+        },
+        {
+          "title": "Lessons Learned",
+          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+        }
+      ],
       "link": "https://www.pluspackage.io"
     },
     {

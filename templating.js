@@ -123,7 +123,9 @@ function layoutProjectPage(index, data) {
     link.innerHTML = obj.link;
 
     // document.getElementById('cover-image').src = retrieveImageSource(obj.cover);
-    document.getElementById('purpose-text').innerHTML = obj.body;
+    document.getElementsByClassName('purpose')[0].innerHTML = obj.body.map((section) => {
+       return "<h2>"+section.title+"</h2><p class='purpose-text'>" + section.text + "</p>"
+    }).join("");
 
     document.getElementById('cover-image').src = './productImg/' + obj.coverImage;
 
