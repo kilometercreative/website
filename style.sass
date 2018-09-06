@@ -3,7 +3,7 @@ $dark: #363636
 $light: #F8F8F8
 $grey: #F4F4F4
 $accent: #587D8B
-$accent-alt: #D9E4E8
+$accent-alt: #D3E0E5
 $accent-hover: #496975
 
 body, div, h1, h2, h3, h4, h5, p, a
@@ -264,7 +264,7 @@ Button:hover
         width: 100%
         height: 400px
         background-color: $grey
-        object-fit: contain
+        object-fit: cover
         margin-bottom: 40px
 
       .case-preview
@@ -366,6 +366,7 @@ Button:hover
         .full-case-icon
           height: 100px
           width: 100px
+          border-radius: 20px
           background-color: $grey
           object-fit: contain
           margin-right: 30px
@@ -374,12 +375,18 @@ Button:hover
           display: flex
           flex-direction: column
 
-
-    .full-case-cover-image
-      height: 400px
+    .cover-img-container
       width: 100%
-      background-color: $grey
-      object-fit: contain
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: center
+      overflow: hidden
+
+      .full-case-cover-image
+        width: 100%
+        object-fit: cover
+
 
     .purpose
       margin-top: 100px
@@ -403,43 +410,46 @@ Button:hover
           h5
             text-align: center
 
-    .full-case-mobile-image-container
-      margin-top: 100px
-      margin-bottom: 50px
-      display: flex
-      flex-direction: row
-      justify-content: flex-start
-      align-items: center
+  .project-image-container
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
 
-      .full-case-mobile-image
-        width: 400px
-        height: 711px
-        object-fit: contain
-        background-color: $grey
+    .full-case-mobile-image
+      width: 400px
+      height: 711px
+      object-fit: contain
+      background-color: white
+      margin-top: 50px
 
-      p
-        margin-left: 50px
-        flex: 2
+    .full-case-square-image
+      width: 400px
+      height: 400px
+      object-fit: contain
+      background-color: white
+      border: solid $grey 2px
+      border-radius: 10px
+      margin-top: 50px
 
-    .full-case-web-image-container
-      margin-top: 100px
-      margin-bottom: 50px
-      display: flex
-      flex-direction: column
-      justify-content: flex-start
-      align-items: center
+  .full-case-web-image-container
+    width: 100%
+    margin-top: 100px
+    margin-bottom: 50px
+    min-height: 60vh
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
 
-      .full-case-web-image
-        width: 100%
-        height: 400px
-        object-fit: contain
-        background-color: $grey
-
-      p
-        margin-top: 50px
-        flex: 2
-        width: 400px
-        text-align: center
+    .full-case-web-image
+      width: 100%
+      height: 55vh
+      object-fit: cover
+      border: solid $grey 2px
+      border-radius: 10px
 
 .footer
   display: flex
@@ -508,6 +518,13 @@ Button:hover
       text-align: left
       min-height: 0
 
+    ._work
+      margin-top: 80px
+      margin-bottom: 50px
+      align-items: flex-start
+      text-align: left
+      min-height: 0
+
     .case-container
       .web-case
         margin-bottom: 60px
@@ -558,6 +575,33 @@ Button:hover
               font-size: 14px
               font-weight: 400
 
+          .cover-img-container
+            height: 80vh
+            background-color: $grey
+
+            .full-case-cover-image
+              height: 100%
+              align-self: center
+
+    .project-image-container
+      .full-case-mobile-image
+        margin-top: 50px
+
+      .full-case-square-image
+        margin-top: 50px
+
+      .full-case-web-image-container
+        min-height: 0
+        margin: 0
+        margin-top: 50px
+
+        .full-case-web-image
+          margin-bottom: 0
+          height: auto
+          width: 100%
+          object-fit: contain
+
+
 
 
 @media (max-width: 480px)
@@ -597,6 +641,9 @@ Button:hover
         text-align: left
 
 
+    ._work
+      width: 90vw
+
     .case-introduction
       display: flex
       align-items: baseline
@@ -613,6 +660,22 @@ Button:hover
     ._cta
       width: 90vw
       margin-bottom: 40px
+
+  ._full_case
+    .full-case-container
+
+      .project-image-container
+
+        .full-case-mobile-image
+          width: 90vw
+          height: auto
+          object-fit: cover
+          margin-top: 50px
+
+        .full-case-square-image
+          width: 90vw
+          height: 90vw
+          margin-top: 50px
 
   .footer
     .footer-img
