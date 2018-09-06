@@ -43,7 +43,7 @@ function layoutWebTile(parent, data) {
 
     parent.innerHTML +=
         "<div class='web-case'>" +
-            "<img src='' alt='' class='web-case-cover-img'/>" +
+            "<img src='productImg/" + data.primaryImage + "' alt='' class='web-case-cover-img'/>" +
             "<div class='case-preview'>" +
                 "<div class='text'>" +
                     "<h2>" + data.title + "</h2>" +
@@ -54,7 +54,7 @@ function layoutWebTile(parent, data) {
                         "<a>View case study</a>" +
                     "</div>" +
                 "</div>" +
-                "<img src='' alt='' class='web-case-alt-img'/>" +
+                "<img src='productImg/" + data.secondaryImage + "' alt='' class='web-case-alt-img'/>" +
             "</div>" +
        "</div>";
 }
@@ -80,9 +80,11 @@ function layoutAppTile(parent, data) {
 
 function layoutWorkPreviewTile(parent, index, data) {
 
-    let linkText = data.platform === "Mobile" ? "Download App" : "Visit Site";
-    let projectLink = 'project.html#' + index;
-    let imageSource = "./img/" + data.previewImage;
+    linkText = data.platform === "Mobile" ? "Download App" : "Visit Site";
+    projectLink = 'project.html#' + index;
+    imageSource = 'productImg/' + data.previewImage;
+
+    console.log(imageSource);
 
     parent.innerHTML +=
         "<div class='default-case-preview'>" +
@@ -101,6 +103,7 @@ function layoutProjectPage(index, data) {
     console.log('layout');
     let obj = data;
 
+    document.getElementById('icon').src = './productImg/' + obj.icon;
     document.getElementById('title').innerHTML = obj.title;
     document.getElementById('tech').innerHTML = obj.tech;
     // document.getElementById('icon').src = retrieveImageSource(obj.icon);
@@ -112,6 +115,8 @@ function layoutProjectPage(index, data) {
     // document.getElementById('cover-image').src = retrieveImageSource(obj.cover);
     document.getElementById('purpose-text').innerHTML = obj.body;
 
+    document.getElementById('cover-image').src = './productImg/' + obj.coverImage;
+
     let paletteContainer = document.getElementById('palette-container');
     for (i=0; i<obj.colors.length; i++) {
         paletteContainer.innerHTML +=
@@ -121,7 +126,7 @@ function layoutProjectPage(index, data) {
             "</div>";
     }
 
-    let caseBody = document.getElementById('full-case-container');
+    let caseBody = document.getElementById('project-image-container');
     for (i=0; i<obj.productImages.length; i++) {
         caseBody.innerHTML += layoutProjectImageTile(obj.productImages[i]);
     }
@@ -130,14 +135,19 @@ function layoutProjectPage(index, data) {
 
 function layoutProjectImageTile(obj) {
 
-    //This is stupid and needs to be fixed
-
     let path = "./productImg/" + obj.source;
     imgClass = "";
     containerClass = "";
     if (obj.type === "mobile") {
         imgClass = "full-case-mobile-image";
-        containerClass = "full-case-mobile-image-container";
+        return(
+            "<img src='" + path + "' alt='' class='" + imgClass + "'/>"
+        );
+    } else if (obj.type === "square") {
+        imgClass = "full-case-square-image";
+        return(
+            "<img src='" + path + "' alt='' class='" + imgClass + "'/>"
+        );
     } else {
         imgClass = "full-case-web-image";
         containerClass = "full-case-web-image-container";
@@ -145,8 +155,7 @@ function layoutProjectImageTile(obj) {
 
     return(
         "<div class='" + containerClass + "'>" +
-            "<img src='" + path + "' alt='' class='" + imgClass + "'>" +
-            "<p>" + obj.caption + "</p>" +
+            "<img src='" + path + "' alt='' class='" + imgClass + "'/>" +
         "</div>"
     );
 }

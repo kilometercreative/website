@@ -24,7 +24,7 @@ h3 {
 h4 {
   font-weight: 400;
   font-size: 18px;
-  color: #D9E4E8; }
+  color: #D3E0E5; }
 
 h5 {
   font-weight: 400;
@@ -220,7 +220,7 @@ Button:hover {
         width: 100%;
         height: 400px;
         background-color: #F4F4F4;
-        object-fit: contain;
+        object-fit: cover;
         margin-bottom: 40px; }
       .cases .case-container .web-case .case-preview, .cases .case-container .mobile-case .case-preview {
         display: flex;
@@ -299,17 +299,23 @@ Button:hover {
         .full-case-container .full-case .title-container .title-left .full-case-icon {
           height: 100px;
           width: 100px;
+          border-radius: 20px;
           background-color: #F4F4F4;
           object-fit: contain;
           margin-right: 30px; }
         .full-case-container .full-case .title-container .title-left .title-left-text {
           display: flex;
           flex-direction: column; }
-    .full-case-container .full-case .full-case-cover-image {
-      height: 400px;
+    .full-case-container .full-case .cover-img-container {
       width: 100%;
-      background-color: #F4F4F4;
-      object-fit: contain; }
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      overflow: hidden; }
+      .full-case-container .full-case .cover-img-container .full-case-cover-image {
+        width: 100%;
+        object-fit: cover; }
     .full-case-container .full-case .purpose {
       margin-top: 100px; }
     .full-case-container .full-case .palette {
@@ -326,38 +332,42 @@ Button:hover {
             margin-bottom: 15px; }
           .full-case-container .full-case .palette .colors-container .color-wrapper h5 {
             text-align: center; }
-    .full-case-container .full-case .full-case-mobile-image-container {
-      margin-top: 100px;
-      margin-bottom: 50px;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center; }
-      .full-case-container .full-case .full-case-mobile-image-container .full-case-mobile-image {
-        width: 400px;
-        height: 711px;
-        object-fit: contain;
-        background-color: #F4F4F4; }
-      .full-case-container .full-case .full-case-mobile-image-container p {
-        margin-left: 50px;
-        flex: 2; }
-    .full-case-container .full-case .full-case-web-image-container {
-      margin-top: 100px;
-      margin-bottom: 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center; }
-      .full-case-container .full-case .full-case-web-image-container .full-case-web-image {
-        width: 100%;
-        height: 400px;
-        object-fit: contain;
-        background-color: #F4F4F4; }
-      .full-case-container .full-case .full-case-web-image-container p {
-        margin-top: 50px;
-        flex: 2;
-        width: 400px;
-        text-align: center; }
+  .full-case-container .project-image-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; }
+    .full-case-container .project-image-container .full-case-mobile-image {
+      width: 400px;
+      height: 711px;
+      object-fit: contain;
+      background-color: white;
+      margin-top: 50px; }
+    .full-case-container .project-image-container .full-case-square-image {
+      width: 400px;
+      height: 400px;
+      object-fit: contain;
+      background-color: white;
+      border: solid #F4F4F4 2px;
+      border-radius: 10px;
+      margin-top: 50px; }
+  .full-case-container .full-case-web-image-container {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+    .full-case-container .full-case-web-image-container .full-case-web-image {
+      width: 100%;
+      height: 55vh;
+      object-fit: cover;
+      border: solid #F4F4F4 2px;
+      border-radius: 10px; }
 
 .footer {
   display: flex;
@@ -409,6 +419,12 @@ Button:hover {
     align-items: flex-start;
     text-align: left;
     min-height: 0; }
+  .main ._work {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+    text-align: left;
+    min-height: 0; }
   .main .case-container .web-case {
     margin-bottom: 60px; }
     .main .case-container .web-case .case-preview .web-case-alt-img {
@@ -440,7 +456,26 @@ Button:hover {
           margin-top: 20px; }
       .main ._full_case .full-case-container .full-case .title-container a {
         font-size: 14px;
-        font-weight: 400; } }
+        font-weight: 400; }
+    .main ._full_case .full-case-container .full-case .cover-img-container {
+      height: 80vh;
+      background-color: #F4F4F4; }
+      .main ._full_case .full-case-container .full-case .cover-img-container .full-case-cover-image {
+        height: 100%;
+        align-self: center; }
+  .main .project-image-container .full-case-mobile-image {
+    margin-top: 50px; }
+  .main .project-image-container .full-case-square-image {
+    margin-top: 50px; }
+  .main .project-image-container .full-case-web-image-container {
+    min-height: 0;
+    margin: 0;
+    margin-top: 50px; }
+    .main .project-image-container .full-case-web-image-container .full-case-web-image {
+      margin-bottom: 0;
+      height: auto;
+      width: 100%;
+      object-fit: contain; } }
 @media (max-width: 480px) {
   h1 {
     font-size: 26px; }
@@ -472,6 +507,8 @@ Button:hover {
       align-items: flex-start; }
       .main ._landing h3 {
         text-align: left; }
+    .main ._work {
+      width: 90vw; }
     .main .case-introduction {
       display: flex;
       align-items: baseline;
@@ -484,6 +521,16 @@ Button:hover {
     .main ._cta {
       width: 90vw;
       margin-bottom: 40px; }
+
+  ._full_case .full-case-container .project-image-container .full-case-mobile-image {
+    width: 90vw;
+    height: auto;
+    object-fit: cover;
+    margin-top: 50px; }
+  ._full_case .full-case-container .project-image-container .full-case-square-image {
+    width: 90vw;
+    height: 90vw;
+    margin-top: 50px; }
 
   .footer .footer-img {
     width: 200vw; } }
