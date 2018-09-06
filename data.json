@@ -31,11 +31,11 @@
       "body": [
         {
           "title": "Purpose",
-          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+          "text": "As college students, we found that our on-campus dining options were just too expensive. And if we wanted our favorite foods at reasonable prices, we’d have to buy in such large quantities that we just ended up throwing food away. Every student deserves access to everyday food at affordable prices, so we decided to do something about it."
         },
         {
-          "title": "Lessons Learned",
-          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+          "title": "Plan",
+          "text": "Through our website, users can buy individual items from a bulk package at bulk prices (i.e. $1.50 for five cans of seltzer out of a case of 24). At the end of the week, if every item in that package has been reserved by a user, we’ll buy it and distribute the individual items to our users."
         }
       ],
       "link": "https://www.pluspackage.io"
@@ -63,15 +63,11 @@
         {
           "source": "fourth.png"}
       ],
-      "introduction": "This is a filler introduction and holy moly does it really just get your britches full of stitches. You should check out this rad case study that just absolutely takes the cake.",
-      "body": [
+      "introduction": "Lift off in Landr as a spaceship navigating an asteroid belt while managing fuel consumption, mining for cash, and shooting lasers.",
+      "body":[
         {
-          "title": "Purpose",
-          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
-        },
-        {
-          "title": "Lessons Learned",
-          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+          "title": "Making Landr",
+          "text": "Landr was born in an all-night programming session and finished in less than a week. It was built in Swift using the SpriteKit framework and is fully featured with upgrades, lasers, achievements, cash, and cool effects. The two components that were hardest to make: an algorithm for drawing cool asteroids and having horizontal movement keep pace with velocity."
         }
       ],
       "link": "https://www.pluspackage.io"
@@ -100,15 +96,15 @@
         {
           "source": "fourth.png"}
       ],
-      "introduction": "This is a filler introduction and holy moly does it really just get your britches full of stitches. You should check out this rad case study that just absolutely takes the cake.",
+      "introduction": "Tileform is a simple puzzle game that challenges you to flip all tiles to a single color by tapping a few buttons.",
       "body": [
         {
-          "title": "Purpose",
-          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+          "title": "How To Play",
+          "text": "We love puzzles. Math puzzles, puzzle games, actual piece-by-piece puzzles, you name it. Yet we struggled to find a fun puzzle game on the App Store that was original, challenging, and not overrun by advertisements, so we decided to make our own. To play Tileform, you press one of 3 or so buttons on the screen and some of the tiles on the screen will change colors or move. All you have to do is press the right buttons in the proper order to make all of the tiles become the same color."
         },
         {
-          "title": "Lessons Learned",
-          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
+          "title": "Making Tileform",
+          "text": "Tileform (codename: Project Rhinoceros) was our first project in Unity, our first time coding in C#, and our first project released on Android. Besides just making the app, we also built a internal web page for creating new puzzles where we could design levels from the ground up, calculate how many moves it would take to solve them, and export them into our app."
         }
       ],
       "link": "https://www.pluspackage.io"
@@ -146,17 +142,11 @@
         {
           "source": "polarity_6.png", "type": "square"}
       ],
-      "introduction": "This is a filler introduction and holy moly does it really just get your britches full of stitches. You should check out this rad case study that just absolutely takes the cake.",
-      "body": [
-        {
-          "title": "Purpose",
-          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
-        },
-        {
-          "title": "Lessons Learned",
-          "text": "Bulk food at everyday prices. Plus package helps you save time and money by splitting low cost, high quantity groceries into custom, affordable packages delivered weekly."
-        }
-      ],
+      "introduction": "What is up? What is Down? Feel the rush of reality as you warp through this neo-fantasy pixel block thrill ride. Wind in your hair as the cyber world spins past you - find upgrades in the forest of towering obstacles seeking to cause destruction. Adrenaline fueled and full of surprises this game will leave you gasping for more.",
+      "body": [{
+        "title": "Making Polarity",
+        "text": "Polarity was one of the first games we made, and as such had a substantial learning curve. We went through multiple iterations on pretty much every part of the game: design and aesthetic changed multiple times, our procedural generation had to be completely rebuilt twice, and the store and power-up system were being tweaked the entire time. At the end of the day, what we kept coming back to was this idea of ‘simplicity.’ We wanted a game that was challenging and replayable without being complex and could be portrayed through visuals that were clean and modern."
+      }],
       "link": "https://www.pluspackage.io"
     }
   ]
