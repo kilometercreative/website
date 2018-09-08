@@ -51,17 +51,19 @@
         "#AAAA99"
       ],
       "icon": "landr_icon.png",
-      "primaryImage": "primary.png",
-      "secondaryImage": "secondary.png",
-      "images": [
+      "coverImage": "landr_cover.png",
+      "primaryImage": "landr_primary.png",
+      "secondaryImage": "landr_preview.png",
+      "previewImage": "landr_preview.png",
+      "productImages": [
         {
-          "source": "first.png"},
+          "source": "landr_1.png", "type": "mobile"},
         {
-          "source": "second.png"},
+          "source": "landr_2.png", "type": "mobile"},
         {
-          "source": "third.png"},
+          "source": "landr_3.png", "type": "mobile"},
         {
-          "source": "fourth.png"}
+          "source": "landr_4.png", "type": "mobile"}
       ],
       "introduction": "Lift off in Landr as a spaceship navigating an asteroid belt while managing fuel consumption, mining for cash, and shooting lasers.",
       "body":[
@@ -86,7 +88,7 @@
       "primaryImage": "primary.png",
       "secondaryImage": "secondary.png",
       "logo": "",
-      "images": [
+      "productImages": [
         {
           "source": "first.png"},
         {
@@ -125,7 +127,7 @@
       ],
       "icon": "polarity_icon.png",
       "coverImage": "polarity_cover.png",
-      "primaryImage": "polarity_cover.png",
+      "primaryImage": "polarity_full.png",
       "secondaryImage": "polarity_preview.png",
       "previewImage": "polarity_preview.png",
       "productImages": [

@@ -316,15 +316,17 @@ Button:hover {
       .full-case-container .full-case .cover-img-container .full-case-cover-image {
         width: 100%;
         object-fit: cover; }
-    .full-case-container .full-case .purpose {
+    .full-case-container .full-case .purpose h2 {
       margin-top: 100px; }
     .full-case-container .full-case .palette {
       margin-top: 100px; }
       .full-case-container .full-case .palette .colors-container {
         display: flex;
-        flex-direction: row; }
+        flex-direction: row;
+        flex-wrap: wrap; }
         .full-case-container .full-case .palette .colors-container .color-wrapper {
-          margin-right: 15px; }
+          margin-right: 15px;
+          margin-bottom: 25px; }
           .full-case-container .full-case .palette .colors-container .color-wrapper .color {
             height: 75px;
             width: 75px;

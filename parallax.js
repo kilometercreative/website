@@ -22,7 +22,6 @@ layers = [
 ];
 
 function parallaxOnScroll() {
-    // console.log(normalizeScrollPosition());
     let n = normalizeScrollPosition();
     for (i=0; i<layers.length; i++) {
         layers[i].image.style.opacity = (1 - n * layers[i].speed).toString();

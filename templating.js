@@ -85,7 +85,7 @@ function layoutAppTile(parent, data) {
                         "<a href='project.html#" + data.id + "'>View case study</a>" +
                     "</div>" +
                 "</div>" +
-                "<img src='' alt='' class='mobile-case-cover-img'/>" +
+                "<img src='productImg/" + data.primaryImage + "' alt='' class='mobile-case-cover-img'/>" +
             "</div>" +
         "</div>";
 }
