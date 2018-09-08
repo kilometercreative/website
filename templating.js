@@ -56,7 +56,9 @@ function layoutWorkPreviewTest() {
 function layoutWebTile(parent, data) {
     parent.innerHTML +=
         "<div class='web-case'>" +
-            "<img src='productImg/" + data.primaryImage + "' alt='' class='web-case-cover-img'/>" +
+            "<div class='web-case-cover-container'>" +
+                "<img src='productImg/" + data.primaryImage + "' alt='' class='web-case-cover-img'/>" +
+            "</div>" +
             "<div class='case-preview'>" +
                 "<div class='text'>" +
                     "<h2>" + data.title + "</h2>" +
@@ -120,7 +122,7 @@ function layoutProjectPage(index, data) {
 
     let link = document.getElementById('external-link');
     link.href = obj.link;
-    link.innerHTML = obj.link;
+    link.innerHTML = (obj.platform === "Mobile") ? "Download App" : "Visit Site";
 
     // document.getElementById('cover-image').src = retrieveImageSource(obj.cover);
     document.getElementsByClassName('purpose')[0].innerHTML = obj.body.map((section) => {

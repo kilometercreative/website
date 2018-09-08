@@ -12,9 +12,9 @@
       ],
       "icon": "plus_package_icon.png",
       "coverImage": "plus_package_cover.png",
+      "previewImage": "plus_package_preview.png",
       "primaryImage": "plus_package_cover.png",
       "secondaryImage": "plus_package_preview.png",
-      "previewImage": "plus_package_preview.png",
       "productImages": [
         {
           "source": "plus_package_landing.png", "type": "web"},
@@ -46,15 +46,14 @@
       "tech": "/mobile/iOS/swift/spritekit",
       "date": "Winter 2018",
       "colors": [
-        "#AA4444",
-        "#AA9944",
-        "#AAAA99"
+        "#000000",
+        "#FFFFFF"
       ],
       "icon": "landr_icon.png",
       "coverImage": "landr_cover.png",
+      "previewImage": "landr_preview.png",
       "primaryImage": "landr_primary.png",
       "secondaryImage": "landr_preview.png",
-      "previewImage": "landr_preview.png",
       "productImages": [
         {
           "source": "landr_1.png", "type": "mobile"},
@@ -72,7 +71,7 @@
           "text": "Landr was born in an all-night programming session and finished in less than a week. It was built in Swift using the SpriteKit framework and is fully featured with upgrades, lasers, achievements, cash, and cool effects. The two components that were hardest to make: an algorithm for drawing cool asteroids and having horizontal movement keep pace with velocity."
         }
       ],
-      "link": "https://www.pluspackage.io"
+      "link": "https://itunes.apple.com/us/app/landr-co/id1322858702"
     },
     {
       "title": "Tileform",
@@ -80,23 +79,25 @@
       "tech": "/mobile/cross-platform/unity/",
       "date": "Fall 2018",
       "colors": [
-        "#AA4444",
-        "#AA9944",
-        "#AAAA99"
+        "#992E76",
+        "#D55451",
+        "#E77A91",
+        "#FBB473"
       ],
       "icon": "tileform_icon.png",
-      "primaryImage": "primary.png",
-      "secondaryImage": "secondary.png",
-      "logo": "",
+      "coverImage": "tileform_cover.png",
+      "previewImage": "tileform_preview.png",
+      "primaryImage": "tileform_primary.png",
+      "secondaryImage": "tileform_preview.png",
       "productImages": [
         {
-          "source": "first.png"},
+          "source": "tileform_1.png", "type": "mobile"},
         {
-          "source": "second.png"},
+          "source": "tileform_2.png", "type": "mobile"},
         {
-          "source": "third.png"},
+          "source": "tileform_3.png", "type": "mobile"},
         {
-          "source": "fourth.png"}
+          "source": "tileform_4.png", "type": "mobile"}
       ],
       "introduction": "Tileform is a simple puzzle game that challenges you to flip all tiles to a single color by tapping a few buttons.",
       "body": [
@@ -109,7 +110,7 @@
           "text": "Tileform (codename: Project Rhinoceros) was our first project in Unity, our first time coding in C#, and our first project released on Android. Besides just making the app, we also built a internal web page for creating new puzzles where we could design levels from the ground up, calculate how many moves it would take to solve them, and export them into our app."
         }
       ],
-      "link": "https://www.pluspackage.io"
+      "link": "https://itunes.apple.com/us/app/tileform/id1313016635"
     },
     {
       "title": "Polarity - the game",
@@ -127,9 +128,9 @@
       ],
       "icon": "polarity_icon.png",
       "coverImage": "polarity_cover.png",
+      "previewImage": "polarity_preview.png",
       "primaryImage": "polarity_full.png",
       "secondaryImage": "polarity_preview.png",
-      "previewImage": "polarity_preview.png",
       "productImages": [
         {
           "source": "polarity_1.png", "type": "mobile"},
@@ -149,7 +150,7 @@
         "title": "Making Polarity",
         "text": "Polarity was one of the first games we made, and as such had a substantial learning curve. We went through multiple iterations on pretty much every part of the game: design and aesthetic changed multiple times, our procedural generation had to be completely rebuilt twice, and the store and power-up system were being tweaked the entire time. At the end of the day, what we kept coming back to was this idea of ‘simplicity.’ We wanted a game that was challenging and replayable without being complex and could be portrayed through visuals that were clean and modern."
       }],
-      "link": "https://www.pluspackage.io"
+      "link": "https://itunes.apple.com/us/app/polarity-the-game/id1257247664"
     }
   ]
 }

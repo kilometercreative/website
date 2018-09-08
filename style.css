@@ -216,12 +216,18 @@ Button:hover {
       display: flex;
       flex-direction: column;
       margin-bottom: 200px; }
-      .cases .case-container .web-case .web-case-cover-img, .cases .case-container .mobile-case .web-case-cover-img {
+      .cases .case-container .web-case .web-case-cover-container, .cases .case-container .mobile-case .web-case-cover-container {
         width: 100%;
         height: 400px;
-        background-color: #F4F4F4;
-        object-fit: cover;
-        margin-bottom: 40px; }
+        overflow: hidden;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end; }
+        .cases .case-container .web-case .web-case-cover-container .web-case-cover-img, .cases .case-container .mobile-case .web-case-cover-container .web-case-cover-img {
+          width: 100%;
+          background-color: #F4F4F4;
+          object-fit: cover; }
       .cases .case-container .web-case .case-preview, .cases .case-container .mobile-case .case-preview {
         display: flex;
         flex-direction: row;
