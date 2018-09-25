@@ -1,6 +1,41 @@
 {
   "cases": [
     {
+      "title": "Dime",
+      "platform": "Mobile",
+      "tech": "/mobile/iOS/UIKit",
+      "date": "Summer 2018",
+      "colors": [
+        "#4ECAF8",
+        "#69ED82",
+        "#FF5C7B",
+        "#D562FF",
+        "#FF8327"
+      ],
+      "icon": "dime_icon.png",
+      "coverImage": "dime_cover.png",
+      "previewImage": "dime_preview.png",
+      "primaryImage": "dime_1.png",
+      "productImages": [
+        {
+          "source": "dime_1.png", "type": "mobile"},
+        {
+          "source": "dime_2.png", "type": "mobile"},
+        {
+          "source": "dime_3.png", "type": "mobile"},
+        {
+          "source": "dime_4.png", "type": "mobile"}
+      ],
+      "introduction": "Dime is a personal finance tracking app with powerful categorization and filtering features made to help you manage your money better.",
+      "body": [
+        {
+          "title": "Why We Made Dime",
+          "text": "Dime is for tracking expenses. Whenever you spend or receive money, let Dime know and soon you'll be seeing a real-time image into your spending habits, the balance in each of your accounts, and if you're spending more money than usual for the day. Dime is made to be simple. Setup is quick and easy, just name the accounts where you keep your money (sources) and maybe add a category or two. Entering expenses is a snap, and powerful insights are just a tap away. There's no login, no connecting external accounts, no mess. It just works."
+        }
+      ],
+      "link": ""
+    },
+    {
       "title": "Plus Package",
       "platform": "Web",
       "tech": "/web/vanilla",
