@@ -21,7 +21,8 @@
   perspective: 300px;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
 
 .parallax-group {
   transform-style: preserve-3d;
