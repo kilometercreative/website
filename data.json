@@ -1,6 +1,7 @@
 {
   "cases": [
     {
+      "id": "dime",
       "title": "Dime",
       "platform": "Mobile",
       "tech": "/mobile/iOS/UIKit",
@@ -33,9 +34,10 @@
           "text": "Dime is for tracking expenses. Whenever you spend or receive money, let Dime know and soon you'll be seeing a real-time image into your spending habits, the balance in each of your accounts, and if you're spending more money than usual for the day. Dime is made to be simple. Setup is quick and easy, just name the accounts where you keep your money (sources) and maybe add a category or two. Entering expenses is a snap, and powerful insights are just a tap away. There's no login, no connecting external accounts, no mess. It just works."
         }
       ],
-      "link": ""
+      "link": "https://itunes.apple.com/us/app/dime-personal-finances/id1437125743?mt=8"
     },
     {
+      "id": "pluspackage",
       "title": "Plus Package",
       "platform": "Web",
       "tech": "/web/vanilla",
@@ -76,6 +78,7 @@
       "link": "https://www.pluspackage.io"
     },
     {
+      "id": "landr",
       "title": "LANDR Co.",
       "platform": "Mobile",
       "tech": "/mobile/iOS/swift/spritekit",
@@ -109,6 +112,7 @@
       "link": "https://itunes.apple.com/us/app/landr-co/id1322858702"
     },
     {
+      "id": "tileform",
       "title": "Tileform",
       "platform": "Mobile",
       "tech": "/mobile/cross-platform/unity/",
@@ -148,6 +152,7 @@
       "link": "https://itunes.apple.com/us/app/tileform/id1313016635"
     },
     {
+      "id": "polarity",
       "title": "Polarity - the game",
       "platform": "Mobile",
       "tech": "/mobile/iOS/swift/spritekit",

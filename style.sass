@@ -232,7 +232,7 @@ Button:hover
 
   ._contact
     max-width: 500px
-    min-height: 75vh
+    min-height: calc(100vh - 218.5px)
     margin-bottom: 100px
 
   ._about
@@ -323,15 +323,17 @@ Button:hover
       align-items: flex-start
       margin-bottom: 80px
 
-      .image-link
+      .work-tile-link
+        text-transform: none
         display: flex
-        margin-bottom: 30px
+        flex-direction: column
 
       .default-case-preview-image
         width: 400px
         height: 400px
         background-color: $grey
         object-fit: contain
+        margin-bottom: 30px
 
       h2
         margin-bottom: 10px
@@ -670,6 +672,9 @@ Button:hover
         .default-case-preview-image
           width: 90vw
           height: 90vw
+      .web-case
+        .web-case-cover-container
+          height: auto
 
     ._cta
       width: 90vw

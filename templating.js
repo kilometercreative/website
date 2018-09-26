@@ -1,4 +1,5 @@
-let data = [];
+let keysInOrder = [];
+let data = {};
 
 function parseOnLoad(buildPage) {
     let req = new XMLHttpRequest();
@@ -8,10 +9,11 @@ function parseOnLoad(buildPage) {
             let response = JSON.parse(req.response);
 
             // don't fail, just return null if cases aren't found
-            data = response.cases && response.cases.map((dataCase, index) => {
-                dataCase.id = index;
-                return dataCase;
-            });
+            data = response.cases && response.cases.reduce((accumulator, dataCase) => {
+                accumulator[dataCase.id] = dataCase;
+                return accumulator;
+            }, {});
+            keysInOrder = response.cases && response.cases.map((dataCase) => dataCase.id);
 
             buildPage();
         }
@@ -27,18 +29,18 @@ function parseOnLoad(buildPage) {
 function layoutIndex(numberToShow) {
     let parent = document.getElementById('case-container');
     for (let i = 0; i < numberToShow; i++) {
-        if (data[i].platform === "Web")
-            layoutWebTile(parent, data[i]);
-        else if (data[i].platform === "Mobile")
-            layoutAppTile(parent, data[i]);
+        if (data[keysInOrder[i]].platform === "Web")
+            layoutWebTile(parent, data[keysInOrder[i]]);
+        else if (data[keysInOrder[i]].platform === "Mobile")
+            layoutAppTile(parent, data[keysInOrder[i]]);
     }
 }
 
 function layoutProjectPageTest() {
     let hash = window.location.hash;
     if (hash) {
-        let index = parseInt(hash.substr(1)); // cut off the "#"
-        layoutProjectPage(index, data[index]);
+        let id = hash.substr(1); // cut off the "#"
+        layoutProjectPage(data[id]);
     } else {
         window.location.href = 'work.html';
     }
@@ -46,69 +48,66 @@ function layoutProjectPageTest() {
 
 function layoutWorkPreviewTest() {
     let parent = document.getElementById('case-container');
-    for (let i = 0; i < data.length; i++) {
-        layoutWorkPreviewTile(parent, data[i]);
+    for (let i = 0; i < keysInOrder.length; i++) {
+        layoutWorkPreviewTile(parent, data[keysInOrder[i]]);
     }
 }
 
 // *********
 
 function layoutWebTile(parent, data) {
-    parent.innerHTML +=
-        "<div class='web-case'>" +
-            "<div class='web-case-cover-container'>" +
-                "<img src='productImg/" + data.primaryImage + "' alt='' class='web-case-cover-img'/>" +
-            "</div>" +
-            "<div class='case-preview'>" +
-                "<div class='text'>" +
-                    "<h2>" + data.title + "</h2>" +
-                    "<h4>"+ data.tech + "</h4>" +
-                    "<h3>" + data.introduction + "</h3>" +
-                    "<div class='links'>" +
-                        "<a href='" + data.link + "'>Visit Site</a>" +
-                        "<a href='project.html#" + data.id + "'>View case study</a>" +
-                    "</div>" +
-                "</div>" +
-                "<img src='productImg/" + data.secondaryImage + "' alt='' class='web-case-alt-img'/>" +
-            "</div>" +
-       "</div>";
+    parent.innerHTML += `
+    <div class='web-case'>
+        <div class='web-case-cover-container'>
+            <img src='productImg/${data.primaryImage}' alt='' class='web-case-cover-img'/>
+        </div>
+        <div class='case-preview'>
+            <div class='text'>
+                <h2>${data.title}</h2>
+                <h4>${data.tech}</h4>
+                <h3>${data.introduction}</h3>
+                <div class='links'>
+                    <a href='${data.link}'>Visit Site</a>
+                    <a href='project.html#${data.id}'>View case study</a>
+                </div>
+            </div>
+            <img src='productImg/${data.secondaryImage}' alt='' class='web-case-alt-img'/>
+        </div>
+    </div>
+    `;
 }
 
 function layoutAppTile(parent, data) {
-    parent.innerHTML +=
-        "<div class='mobile-case'>" +
-            "<div class='case-preview'>" +
-                "<div class='text'>" +
-                    "<h2>" + data.title +  "</h2>" +
-                    "<h4>" + data.tech + "</h4>" +
-                    "<h3>" + data.introduction + "</h3>" +
-                    "<div class='links'>" +
-                        "<a>Download App</a>" + // TODO
-                        "<a href='project.html#" + data.id + "'>View case study</a>" +
-                    "</div>" +
-                "</div>" +
-                "<img src='productImg/" + data.primaryImage + "' alt='' class='mobile-case-cover-img'/>" +
-            "</div>" +
-        "</div>";
+    parent.innerHTML += `
+        <div class='mobile-case'>
+            <div class='case-preview'>
+                <div class='text'>
+                    <h2>${data.title}</h2>
+                    <h4>${data.tech}</h4>
+                    <h3>${data.introduction}</h3>
+                    <div class='links'>
+                        <a href='${data.link}'>Download App</a>
+                        <a href='project.html#${data.id}'>View case study</a>
+                    </div>
+                </div>
+                <img src='productImg/${data.primaryImage}' alt='' class='mobile-case-cover-img'/>
+            </div>
+        </div>`;
 }
 
 function layoutWorkPreviewTile(parent, data) {
-    linkText = data.platform === "Mobile" ? "Download App" : "Visit Site";
-    projectLink = 'project.html#' + data.id;
-    imageSource = 'productImg/' + data.previewImage;
-
-    parent.innerHTML +=
-        "<div class='default-case-preview'>" +
-            "<a href='" + projectLink + "' class='image-link'>" +
-                "<img src='" + imageSource + "' alt='' class='default-case-preview-image'/>" +
-            "</a>" +
-            "<h2>" + data.title + "</h2>" +
-            "<h4>" + data.tech + "</h4>" +
-            "<a href='" + data.link + "'>" + linkText + "</a>" +
-        "</div>";
+    parent.innerHTML += `
+        <div class='default-case-preview'>
+            <a href='project.html#${data.id}' class='work-tile-link'>
+                <img src='productImg/${data.previewImage}' alt='' class='default-case-preview-image'/>
+                <h2>${data.title}</h2>
+            </a>
+            <h4>${data.tech}</h4>
+            <a href='${data.link}'>${data.platform === "Mobile" ? "Download App" : "Visit Site"}</a>
+        </div>`;
 }
 
-function layoutProjectPage(index, data) {
+function layoutProjectPage(data) {
     // TODO - This opacity fade needs to be called once data is received, is funky rn
     document.getElementById('full-case-container').style.opacity = "1";
 
