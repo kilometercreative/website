@@ -195,7 +195,7 @@ Button:hover {
     flex: 1; }
   .main ._contact {
     max-width: 500px;
-    min-height: 75vh;
+    min-height: calc(100vh - 218.5px);
     margin-bottom: 100px; }
   .main ._about {
     max-width: 880px; }
@@ -264,14 +264,16 @@ Button:hover {
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 80px; }
-      .cases .case-container .default-case-preview .image-link {
+      .cases .case-container .default-case-preview .work-tile-link {
+        text-transform: none;
         display: flex;
-        margin-bottom: 30px; }
+        flex-direction: column; }
       .cases .case-container .default-case-preview .default-case-preview-image {
         width: 400px;
         height: 400px;
         background-color: #F4F4F4;
-        object-fit: contain; }
+        object-fit: contain;
+        margin-bottom: 30px; }
       .cases .case-container .default-case-preview h2 {
         margin-bottom: 10px; }
       .cases .case-container .default-case-preview h4 {
@@ -528,6 +530,8 @@ Button:hover {
     .main .case-container .default-case-preview .default-case-preview-image {
       width: 90vw;
       height: 90vw; }
+    .main .case-container .web-case .web-case-cover-container {
+      height: auto; }
     .main ._cta {
       width: 90vw;
       margin-bottom: 40px; }

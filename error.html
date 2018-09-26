@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kilometer Creative</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -12,5 +15,50 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+
+<div class="mobile-header">
+    <div class="top" id="mobile-top">
+        <a href="index.html"><img src="./img/Logo.svg" alt="" class="mobile-logo"/></a>
+        <div class="mobile-header-right">
+            <div id="accordion-button" class="accordion-button" onclick="toggleMobileNav();">
+                <div class="accordion-component"></div>
+                <div class="accordion-component"></div>
+                <div class="accordion-component"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-nav-container" id="mobile-nav-container">
+        <a href="work.html" class="link mobile-header-link">Work</a>
+        <a href="about.html" class="link mobile-header-link">About</a>
+        <a href="contact.html" class="link mobile-header-link">Contact</a>
+    </div>
+</div>
+
+<div class="page-container">
+
+    <div class="web-header">
+        <a href="index.html"><img src="./img/Logo.svg" alt="" class="web-logo"/></a>
+        <div class="header-right">
+            <a href="work.html" class="link header-link">Work</a>
+            <a href="about.html" class="link header-link">About</a>
+            <a href="contact.html" class="link header-link">Contact</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="pane cover _contact">
+            <h1>Page Not Found</h1>
+            <h3>We couldn't find the page you were looking for.</h3>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h4>© 2018 Kilometer Creative LLC</h4>
+    </div>
+
+</div>
+
+<script src="mobileNav.js"></script>
+
 </body>
 </html>
