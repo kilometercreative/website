@@ -29,8 +29,6 @@ layers = [
     }
 ].map((l)=>Object.assign(l, {image: l.layer.getElementsByTagName("img")[0]}));
 
-console.log(layers);
-
 function parallaxOnScroll() {
     let n = normalizeScrollPosition();
     for (let i=0; i<layers.length; i++) {

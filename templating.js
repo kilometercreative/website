@@ -111,7 +111,6 @@ function layoutProjectPage(data) {
     // TODO - This opacity fade needs to be called once data is received, is funky rn
     document.getElementById('full-case-container').style.opacity = "1";
 
-    console.log('layout');
     let obj = data;
 
     document.getElementById('icon').src = './productImg/' + obj.icon;
