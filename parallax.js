@@ -3,28 +3,40 @@ WINDOW_HEIGHT = window.innerHeight;
 container = document.getElementById("parallax-container");
 
 layers = [
-    layer_1 = {
-        image: document.getElementById("px-1"),
-        speed: 1.4
+    {
+        layer: document.getElementById("px-1"),
+        startingOffset: 87,
+        scrollSpeed: 0.2,
+        opacitySpeed: 1.4
     },
-    layer_2 = {
-        image: document.getElementById("px-2"),
-        speed: 1.2
+    {
+        layer: document.getElementById("px-2"),
+        startingOffset: 77,
+        scrollSpeed: 0.5,
+        opacitySpeed: 1.2
     },
-    layer_3 = {
-        image: document.getElementById("px-3"),
-        speed: 1.08
+    {
+        layer: document.getElementById("px-3"),
+        startingOffset: 72,
+        scrollSpeed: 0.6,
+        opacitySpeed: 1.08
     },
-    layer_4 = {
-        image: document.getElementById("px-4"),
-        speed: 1
+    {
+        layer: document.getElementById("px-4"),
+        startingOffset: 55,
+        scrollSpeed: 1,
+        opacitySpeed: 1
     }
-];
+].map((l)=>Object.assign(l, {image: l.layer.getElementsByTagName("img")[0]}));
+
+console.log(layers);
 
 function parallaxOnScroll() {
     let n = normalizeScrollPosition();
-    for (i=0; i<layers.length; i++) {
-        layers[i].image.style.opacity = (1 - n * layers[i].speed).toString();
+    for (let i=0; i<layers.length; i++) {
+        let l = layers[i];
+        l.image.style.opacity = (1 - n * l.opacitySpeed).toString();
+        l.layer.style.transform = `translateY(${l.startingOffset+30*n*l.scrollSpeed}vh)`;
     }
 }
 

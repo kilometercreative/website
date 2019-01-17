@@ -38,19 +38,19 @@
   left: 0; }
 
 .px-1 {
-  transform: translateZ(-100px) scale(1.33) translateY(87vh);
+  transform: translateY(87vh);
   z-index: -1; }
 
 .px-2 {
-  transform: translateZ(-250px) scale(1.83) translateY(77vh);
+  transform: translateY(77vh);
   z-index: -2; }
 
 .px-3 {
-  transform: translateZ(-400px) scale(2.33) translateY(72vh);
+  transform: translateY(72vh);
   z-index: -3; }
 
 .px-4 {
-  transform: translateZ(-500px) scale(2.67) translateY(55vh);
+  transform: translateY(55vh);
   z-index: -4; }
 
 @media (max-width: 1080px) {
